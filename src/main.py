@@ -1,10 +1,10 @@
 import cv2
 from utils import getContours, warpImage, reorder, findDistance
 
-webcam = False
+webcam = True
 
 # PATH FOR THE IMAGE IN CASE NO WEBCAM
-path = "../img/1.jpg"
+#path = "../img/1.jpg"
 
 # PARAMETERS FOR VIDEO CAPTURE
 cap = cv2.VideoCapture(0)
@@ -26,7 +26,7 @@ while True:
     if webcam:
         success, img = cap.read()
     else:
-        img = cv2.imread(path)
+        img = cv2.imread()
 
         # Shrink the image by factor of 2 so that it fits the frame
     img = cv2.resize(img, (0, 0), None, 0.5, 0.5)
